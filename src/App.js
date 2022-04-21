@@ -2,11 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import Dropdown from './components/Dropdown';
+import ItemListContainer from './components/ItemListContainer';
 function App() {
-  let button = <Dropdown text={"Categorias"} items={["Shorts", "Top", "Insumos"]} />
   return (
     <div className="App">
-      <Navbar elements={["Inicio", "Sobre mi", "Carrito", button]} />
+      <Navbar elements={["Inicio", "Sobre mi", <Dropdown text={"Categorias"} items={["Shorts", "Top", "Insumos"]} /> ]} />
+      <ItemListContainer />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
