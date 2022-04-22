@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Navbar elements={["Inicio", "Sobre mi", <Dropdown text={"Categorias"} items={["Shorts", "Top", "Insumos"]} /> ]} />
-      <ItemListContainer />
+      <ItemListContainer items={"Acá estarán mis productos"}/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

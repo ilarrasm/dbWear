@@ -1,8 +1,8 @@
 import React from 'react'
 
-function ItemListContainer() {
+function ItemListContainer({items}) {
   return (
-    <p>Aquí desarrollaré el cuerpo</p>
+    <p>{items || "Falta agregar productos"}</p>
   )
 }
 
