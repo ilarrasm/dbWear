@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Navbar elements={["Inicio", "Sobre mi", <Dropdown text={"Categorias"} items={["Shorts", "Top", "Insumos"]} /> ]} />
-      <ItemListContainer items={ <ItemCount cantidad={40} />}/>
+      <ItemListContainer items={ <ItemCount stock={40} init={1} onAdd={"función futura"} />}/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
