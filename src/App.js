@@ -3,12 +3,12 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Dropdown from './components/Dropdown';
 import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount';
+
 function App() {
   return (
     <div className="App">
       <Navbar elements={["Inicio", "Sobre mi", <Dropdown text={"Categorias"} items={["Shorts", "Top", "Insumos"]} /> ]} />
-      <ItemListContainer items={ <ItemCount stock={40} init={1} onAdd={"función futura"} />}/>
+      <ItemListContainer/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
