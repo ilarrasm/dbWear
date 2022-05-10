@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Item({id, nombre, descripcion, precio, img}) {
 
@@ -8,12 +9,14 @@ export default function Item({id, nombre, descripcion, precio, img}) {
   
   
     return (
-    <div>
-        <span>{id}</span>
-        <h4>{nombre}</h4>
-        <img src={img} alt="" />
-        <p>{descripcion}</p>
-        <span>{precio}</span>
+    <div key={id} className='flex flex-col m-5 w-72 h-72 rounded overflow-hidden drop-shadow-lg'>
+        
+        <img src={img} alt=""  className='h-full  object-cover'/>
+        <h4 className='text-neutral-700 text-2xl my-2'>{nombre}</h4>
+        <span className='self-end m-1'>{precio}</span>
+        <p className='text-md'>{descripcion}</p>
+        <button className='rounded px-5 py-1 mt-5 hover:bg-yellow-300 transition-all ease-in-out duration-150 bg-yellow-400 text-neutral-700 self-end'><Link to={"/itemDetail/"+id}> seguir</Link></button>
+        
     </div>
   )
 }

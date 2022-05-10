@@ -3,7 +3,9 @@ import { RiShoppingCartLine } from "react-icons/ri";
 function CartIcon() {
   return (
     
-    <><RiShoppingCartLine /></>
+    <button>
+    <RiShoppingCartLine />
+    </button>
   )
 }
 

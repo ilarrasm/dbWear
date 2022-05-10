@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import ItemCount from './ItemCount';
 import ItemList from "./ItemList"
 function ItemListContainer() {
 
@@ -12,11 +11,11 @@ function ItemListContainer() {
 
       id: "0",
 
-      img: "https://sweyle.com/wp-content/uploads/2018/05/3672-nectuy.jpg",
+      img: "https://i.pinimg.com/originals/20/8f/05/208f05b84e20a18ec741a3209502caa6.jpg",
 
-      nombre: "short",
+      nombre: "Short",
 
-      precio: "99.99 dolares"
+      precio: "99.99 €"
     },
     {
 
@@ -26,9 +25,9 @@ function ItemListContainer() {
 
       img: "https://www.envybodyshop.com/wp-content/uploads/2021/02/creeper-205-lvpu.jpg",
 
-      nombre: "zapatillas",
+      nombre: "Zapatillas",
 
-      precio: "993.99 dolares"
+      precio: "993.99 €"
     },
     {
 
@@ -38,9 +37,9 @@ function ItemListContainer() {
 
       img: "https://i.pinimg.com/736x/cb/f0/25/cbf025e14439da37f4785e71089c01d3.jpg",
 
-      nombre: "medias",
+      nombre: "Medias",
 
-      precio: "9.99 dolares"
+      precio: "9.99 €"
     }
     
   ];
@@ -56,7 +55,7 @@ function ItemListContainer() {
       setTimeout(() => {
         resolve(data);
         console.log(data);
-      }, 2000);
+      }, 800);
       });
     promesa.then((result) =>{
         setProductos(result)
@@ -75,7 +74,6 @@ function ItemListContainer() {
 
   return (
     <>
-    <ItemCount stock={40} init={1} />
     <ItemList lista={productos} />
     </>
   )

@@ -1,13 +1,16 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom';
 import CartIcon from './CartIcon';
-function Navbar({elements}) {
+import Dropdown from './Dropdown';
+function Navbar() {
   //logica
-  const element = elements.map((item, index) =>  <li key={index} className='mr-5'><a className='text-slate-300 hover:text-slate-400 p-2' href="./index.html">{item}</a></li>);
   return (
-    <navbar className="flex bg-neutral-700 p-5">
+    <navbar className="flex p-5">
         <ul className='flex flex-row m-5 justify-end items-center'>
-          {element}
-          <li key={element} className='mr-5'><a className='text-slate-300 hover:text-slate-400 p-2' href="./index.html"><CartIcon /></a></li>
+          <li key={1} className='mr-5 p-2'><NavLink className='text-neutral-300 hover:text-neutral-400 p-2' to="/">Home</NavLink></li>
+          <li key={2} className='mr-5 p-2'><Dropdown items={["Short", "Remera", "buzos"]} text={"Categorias"}/></li>
+          <li key={3} className='mr-5 p-2'><NavLink className='text-neutral-300 hover:text-neutral-400 p-2' to="/card">About Us</NavLink></li>
+          <li key={4} className='mr-5 p-2'><CartIcon /></li>
         </ul>
         
     </navbar>
