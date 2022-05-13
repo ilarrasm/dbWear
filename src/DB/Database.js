@@ -1,3 +1,4 @@
+const imagenes = require.context("../media", true)
 const productos =[
         {
             id: 0,
@@ -5,7 +6,8 @@ const productos =[
             nombre: "Short de Pole Dance",
             descripcion: "El mejor short de poledance del mundo",
             precio: 99.9,
-            cantidad: 100
+            cantidad: 100,
+            img: imagenes("./short1.jpeg")
         },
         {
             
@@ -14,7 +16,8 @@ const productos =[
             nombre: "Top de Pole Dance",
             descripcion: "El mejor top de poledance del mundo",
             precio: 99.9,
-            cantidad: 100
+            cantidad: 100,
+            img: imagenes("./top1.jpeg")
 
         },
         {
@@ -24,7 +27,8 @@ const productos =[
             nombre: "braga de Pole Dance",
             descripcion: "La mejor braga de poledance del mundo",
             precio: 99.9,
-            cantidad: 100
+            cantidad: 100,
+            img: imagenes("./braga1.jpeg")
 
         },
         {
@@ -34,7 +38,8 @@ const productos =[
             nombre: "crema anti-adherente de Pole Dance",
             descripcion: "Crema anti-adherente",
             precio: 99.9,
-            cantidad: 100
+            cantidad: 100,
+            img: imagenes("./crema.webp")
 
         },
         {
@@ -44,7 +49,8 @@ const productos =[
             nombre: "short 2 de Pole Dance",
             descripcion: "El mejor short de poledance del mundo",
             precio: 99.9,
-            cantidad: 200
+            cantidad: 200,
+            img: imagenes("./short2.jpeg")
 
         },
         {
@@ -54,7 +60,8 @@ const productos =[
             nombre: "tops 2 de Pole Dance",
             descripcion: "El mejor top de poledance del mundo",
             precio: 99.9,
-            cantidad: 200
+            cantidad: 200,
+            img: imagenes("./top2.jpeg")
 
         },
         {
@@ -64,7 +71,8 @@ const productos =[
             nombre: "braga 2 de Pole Dance",
             descripcion: "Altas bragas de poledance del mundo",
             precio: 99.9,
-            cantidad: 500
+            cantidad: 500,
+            img: imagenes("./braga2.jpeg")
 
         }
 ];

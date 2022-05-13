@@ -38,11 +38,11 @@
 }
 
 .bg-Top{
-    background-image: url("media/tops.jpg");
+    background-image: url("media/tops.jpeg");
 }
 
 .bg-Braga{
-    background-image: url("media/bragas.jpg");
+    background-image: url("media/bragas.jpeg");
 }
 .dropDown{
     transition: height .5s ease-in;

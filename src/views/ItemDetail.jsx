@@ -8,8 +8,7 @@ const ItemDetail = () => {
   let product = productos[id];
   console.log(product);
   return (
-    <main> 
-      <h1>id {id}</h1>
+    <main className='flex flex-col '> 
       <ItemDetailContainer prod={product}></ItemDetailContainer>
     </main>
   )

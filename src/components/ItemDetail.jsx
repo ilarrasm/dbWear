@@ -1,9 +1,15 @@
-import React, {useState} from 'react'
+import  React, {useState} from 'react'
 import ItemListContainer from "./ItemListContainer"
-import ItemCount from "./ItemCount"  
+import ItemCount from "./ItemCount"
+import { NavLink } from 'react-router-dom'  
 export default function ItemDetail({producto}) {
+  const [Cantidad, setCantidad] = useState(0)
+  function onAdd(c){
+    setCantidad(c)
+  }
+  let obj = {product: producto, cantidad: Cantidad}
   return (
-    <main className='flex flex-col bg-neutral-200'>
+    <>
             {
                 producto ? (
                 <>
@@ -14,18 +20,21 @@ export default function ItemDetail({producto}) {
 
                     <p className='text-neutral-600 text-md'>{producto.descripcion}</p>
 
-                    <button className='rounded px-4 py-3 m-5 hover:bg-yellow-300 transition-all ease-in-out duration-150 bg-yellow-400 text-neutral-700 self-end'>Comprar</button>
+                    <NavLink to={"/cart"}>
+                      <button className='rounded px-4 py-3 m-5 hover:bg-yellow-300 transition-all ease-in-out duration-150 bg-yellow-400 text-neutral-700 self-end'>Comprar</button>
+                    </NavLink>
+                    
 
                   </div>
                 </div>
-                <ItemCount stock={producto.cantidad} init={1} onAdd/>                
+                <ItemCount stock={producto.cantidad} init={1} onAdd={onAdd}/>                
                 <ItemListContainer></ItemListContainer>
                 
                 </>
                
                 ): (<h1>No found</h1>)
             }
-    </main>
+    </>
   )
 }
 /* <h1>{producto.titulo}</h1>

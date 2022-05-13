@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 function ItemCount({stock, init, onAdd}) {
     const [contador, setContador] = useState(init)
-    function enviar(){
-      onAdd = contador
-      return onAdd
+    let cantidad = contador
+    let guardar = () =>{
+      onAdd(cantidad)
     }
-   
     useEffect(() => {
         // aca es cuando el componente nace o (parecido al docuemnte.ready() de javascript)
       console.log('el componente esta listo')
@@ -26,12 +25,13 @@ function ItemCount({stock, init, onAdd}) {
     function restar() {
         contador > init ? setContador(contador - 1) : alert("no puede quedar el carrito vacio")
     }
+    
   return (
-    <div> 
-    <button onClick={restar}>restar 1</button>
-    <h1>contador es : {contador}</h1>
-    <button onClick={sumar}>sumar 1</button>
-    <button onClick={enviar}>Enviar</button>
+    <div className="flex flex-col justify-center items-center"> 
+      <button onClick={restar}>restar 1</button>
+      <span>contador es : {contador}</span>
+      <button onClick={sumar}>sumar 1</button>
+      <button onClick={guardar}>Enviar</button>
     </div>
   )
 }
