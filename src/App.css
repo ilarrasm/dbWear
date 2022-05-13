@@ -12,3 +12,38 @@
         opacity: 1;
     }
 }
+.toDown{
+    text-align: inherit;
+    transition: height .5s;
+}
+.toDown:hover:before{
+    width: 100%;
+}
+.toDown:before{
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color:  rgb(38, 38, 38);
+    width: 0%;
+    height: 100%;
+    z-index: 15;
+    opacity: .6;
+    transition: width .5s ease-in;
+}
+
+.bg-Short{
+    background-image: url("media/shorts.jpg");
+}
+
+.bg-Top{
+    background-image: url("media/tops.jpg");
+}
+
+.bg-Braga{
+    background-image: url("media/bragas.jpg");
+}
+.dropDown{
+    transition: height .5s ease-in;
+}

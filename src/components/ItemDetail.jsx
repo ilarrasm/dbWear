@@ -1,11 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ItemListContainer from "./ItemListContainer"
-
+import ItemCount from "./ItemCount"  
 export default function ItemDetail({producto}) {
- 
-
-  
-
   return (
     <main className='flex flex-col bg-neutral-200'>
             {
@@ -14,7 +10,7 @@ export default function ItemDetail({producto}) {
                 <div className='flex fadeIn'>
                   <img className='w-full h-80 self-center object-cover ml-5 object-bottom rounded-lg' src={producto.img} alt="" /> 
                   <div className='flex flex-col w-full p-5 text-left'>
-                    <h1 className='py-5 text-5xl tracking-wider text-neutral-700 uppercase '>{producto.titulo}</h1> 
+                    <h1 className='py-5 text-5xl tracking-wider text-neutral-700 uppercase '>{producto.nombre}</h1> 
 
                     <p className='text-neutral-600 text-md'>{producto.descripcion}</p>
 
@@ -22,7 +18,7 @@ export default function ItemDetail({producto}) {
 
                   </div>
                 </div>
-                
+                <ItemCount stock={producto.cantidad} init={1} onAdd/>                
                 <ItemListContainer></ItemListContainer>
                 
                 </>

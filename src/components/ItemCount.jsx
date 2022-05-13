@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 function ItemCount({stock, init, onAdd}) {
     const [contador, setContador] = useState(init)
     function enviar(){
-      onAdd = console.log("Enviado");
+      onAdd = contador
+      return onAdd
     }
    
     useEffect(() => {

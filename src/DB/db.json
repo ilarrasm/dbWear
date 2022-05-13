@@ -1,0 +1,74 @@
+{
+    "productos": [
+        {
+            "id": "0",
+            "categoria": "shorts",
+            "nombre": "Short de Pole Dance",
+            "descripcion": "El mejor short de poledance del mundo",
+            "precio": "99.9",
+            "cantidad": "100"
+        },
+        {
+            
+            "id": "1",
+            "categoria": "tops",
+            "nombre": "Top de Pole Dance",
+            "descripcion": "El mejor top de poledance del mundo",
+            "precio": "99.9",
+            "cantidad": "100"
+
+        },
+        {
+            
+            "id": "2",
+            "categoria": "bragas",
+            "nombre": "braga de Pole Dance",
+            "descripcion": "La mejor braga de poledance del mundo",
+            "precio": "99.9",
+            "cantidad": "100"
+
+        },
+        {
+            
+            "id": "3",
+            "categoria": "accesorios",
+            "nombre": "crema anti-adherente de Pole Dance",
+            "descripcion": "Crema anti-adherente",
+            "precio": "99.9",
+            "cantidad": "100"
+
+        },
+        {
+            
+            "id": "4",
+            "categoria": "shorts",
+            "nombre": "short 2 de Pole Dance",
+            "descripcion": "El mejor short de poledance del mundo",
+            "precio": "99.9",
+            "cantidad": "200"
+
+        },
+        {
+            
+            "id": "5",
+            "categoria": "tops",
+            "nombre": "tops 2 de Pole Dance",
+            "descripcion": "El mejor top de poledance del mundo",
+            "precio": "99.9",
+            "cantidad": "200"
+
+        },
+        {
+            
+            "id": "6",
+            "categoria": "bragas",
+            "nombre": "braga 2 de Pole Dance",
+            "descripcion": "Altas bragas de poledance del mundo",
+            "precio": "99.9",
+            "cantidad": "500"
+
+        }
+
+
+    ]
+}
