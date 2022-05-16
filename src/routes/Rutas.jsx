@@ -13,7 +13,7 @@ function Rutas() {
               <Route index element={<Home/>}/>
               <Route path="/cart" element={<Card/>}/>
               <Route path="/itemList" element={<ItemList />}></Route>
-              <Route path="/itemList/category" element={<ItemList />}></Route>
+              <Route path="/itemList/:categoria" element={<ItemList />}></Route>
               <Route path="/itemDetail/:id" element={<ItemDetail />}></Route>
             </Route>
             

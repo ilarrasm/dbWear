@@ -1,8 +1,8 @@
 import React from 'react'
-import ItemListContainer from '../components/ItemListContainer'
+import ItemList from "./ItemList"
 const Home = () => {
   return (
-    <main className='pl-5 bg-neutral-100'>
+    <main className='flex flex-col pl-5 bg-neutral-100'>
       <div>
 
       </div>
@@ -14,10 +14,10 @@ const Home = () => {
           <p className='mb-5'>Nuestro compromiso con las mujeres y la disciplina para su desarrollo porque el pole dance es autosuperación, libertad y arte.</p> 
 
         </div>
-    
+        
       </div>
       <h2 className='text-4xl'>Nuestros Productos</h2>
-      <ItemListContainer></ItemListContainer>
+      <ItemList></ItemList>
     </main>
   )
 }

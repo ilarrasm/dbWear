@@ -27,11 +27,14 @@ function ItemCount({stock, init, onAdd}) {
     }
     
   return (
-    <div className="flex flex-col justify-center items-center"> 
-      <button onClick={restar}>restar 1</button>
-      <span>contador es : {contador}</span>
-      <button onClick={sumar}>sumar 1</button>
-      <button onClick={guardar}>Enviar</button>
+    <div className="flex flex-col justify-center items-center m-5"> 
+      <div className="flex">
+        <button onClick={restar} className="px-5 py-2 rounded bg-neutral-700 text-neutral-200">restar 1</button>
+        <span className="px-5 py-2 rounded bg-neutral-700 text-neutral-200 mx-5">contador es : {contador}</span>
+        <button onClick={sumar} className="px-5 py-2 rounded bg-neutral-700 text-neutral-200">sumar 1</button>
+      </div>
+      
+      <button onClick={guardar} className="my-5 px-5 py-2 bg-neutral-400 text-neutral-200 rounded">Enviar</button>
     </div>
   )
 }

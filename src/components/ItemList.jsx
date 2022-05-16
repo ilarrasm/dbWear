@@ -1,11 +1,11 @@
 import React from 'react'
 import Item from './Item'
-
 export default function ItemList({lista}){ 
-
-
-
+  
+  console.log(lista);
   return (
+    
+    
     <section className='grid grid-cols-4 p-5 fadeIn'>
       {
       lista.length > 0 ? (lista.map((list, index) =>(
@@ -14,7 +14,8 @@ export default function ItemList({lista}){
       ) :(
         <h1> cargando ...</h1>
       )
-      }
+      }  
     </section>
+  
   )
 }

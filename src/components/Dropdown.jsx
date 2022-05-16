@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Dropdown ({text, items} ) {
   const clickear = (e)=>{
@@ -22,11 +22,11 @@ function Dropdown ({text, items} ) {
       setTimeout(() => {
         element.classList.toggle("hidden")
       }, 200);
-      
     });
 
+
   }
-  const listItems = items.map((item) => <li key={item.id} className={`flex h-0 m-5 rounded-l bg-no-repeat bg-cover w-full items-center justify-center toDown relative bg-${item.img} h-0`}><Link className="p-5 text-neutral-100 bg-neutral-900 text-xl  text-center self-center items-center z-50 hidden a" to={"/itemList/" + item.categoria}>{item.categoria}</Link></li>);
+  const listItems = items.map((item) => <li key={item.id} className={`flex h-0 m-5 rounded-l bg-no-repeat bg-cover w-full items-center justify-center toDown relative bg-${item.img} h-0`}><NavLink key={item.id} className="p-5 text-neutral-100 bg-neutral-900 text-xl  text-center self-center items-center z-50 hidden a" to={"/itemList/" + item.categoria}>{item.categoria}</NavLink></li>);
   return (
     <>
         <button onClick={clickear} className="text-neutral-100 bg-neutral-700 hover:bg-yellow-500 hover:text-yellow-100 focus:outline-none  rounded-lg text-sm p-2  relative" type="button"> {text || "boton"}  </button>
