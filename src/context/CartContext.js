@@ -22,15 +22,22 @@ const CartContext = ({children}) => {
   const clear = ()=> setCarrito([]);
   const removeItem = (producte) => {
     let index = [ ...carrito].indexOf(producte)
-    let array = carrito.splice(index, 1)
+    let array = carrito.splice(index, 1)  
     setCarrito(array)
     if(carrito.length = 1){
       setCarrito([]);
     }
   }; 
- 
+  const isInCart = (producto)=>{
+    let comparar = carrito.find( (prod) => prod.id = producto.id)
+    if(comparar){
+      return true
+    }else{
+      return false
+    }
+  }
   return (
-    <GlobalCartContext.Provider value={{addItem, carrito, clear, removeItem}}>
+    <GlobalCartContext.Provider value={{addItem, carrito, clear, removeItem, isInCart}}>
         {children}
     </GlobalCartContext.Provider>
   )
