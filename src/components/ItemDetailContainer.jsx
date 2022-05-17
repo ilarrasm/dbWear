@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
 export default function ItemDetailContainer({prod}) {
-    const [producto, setProducto] = useState()
+    const [producto, setProducto] = useState(prod)
     let produc = prod
-    console.log(produc);
     useEffect(() => {
     
         let promesa = new Promise((resolve, reject) =>{

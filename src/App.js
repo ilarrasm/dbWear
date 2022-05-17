@@ -1,11 +1,13 @@
-// import logo from './logo.svg';
 import './App.css';
+import CartContext from './context/CartContext';
 import Rutas from './routes/Rutas';
 function App() {
 
-  
   return (
-    <Rutas></Rutas>
+      <CartContext>
+              <Rutas></Rutas>
+      </CartContext>
+
   );
 }
 

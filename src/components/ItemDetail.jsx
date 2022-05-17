@@ -1,13 +1,14 @@
-import  React, {useState} from 'react'
-import ItemListContainer from "./ItemListContainer"
+import  React, {useState, useContext} from 'react'
 import ItemCount from "./ItemCount"
-import { NavLink } from 'react-router-dom'  
+import { NavLink } from 'react-router-dom'
+import { GlobalCartContext } from '../context/CartContext'  
 export default function ItemDetail({producto}) {
   const [Cantidad, setCantidad] = useState(0)
+  const {addItem, carrito} = useContext(GlobalCartContext)
   function onAdd(c){
     setCantidad(c)
   }
-  let obj = {product: producto, cantidad: Cantidad}
+  let obj = {nombre: producto.nombre, cantidad: Cantidad, id: producto.id}
   return (
     <>
             {
@@ -19,11 +20,12 @@ export default function ItemDetail({producto}) {
                     <h1 className='py-5 text-5xl tracking-wider text-neutral-700 uppercase '>{producto.nombre}</h1> 
                     
                     <p className='text-neutral-600 text-md'>{producto.descripcion}</p>
-                    <ItemCount stock={producto.cantidad} init={1} onAdd={onAdd}/>   
-                    <NavLink className="flex justify-end" to={"/cart"}>
-                      <button className='rounded px-4 py-3 m-5 hover:bg-yellow-300 transition-all ease-in-out duration-150 bg-yellow-400 text-neutral-700 self-end'>Comprar</button>
+                    <ItemCount stock={producto.cantidad} init={1} onAdd={onAdd}/> 
+                   
+                    <NavLink className="flex justify-end" to="/cart">
+                    <button className='rounded px-4 py-3 m-5 hover:bg-yellow-300 transition-all ease-in-out duration-150 bg-yellow-400 text-neutral-700 self-end' onClick={() => addItem(obj)} >Comprar</button>  
                     </NavLink>
-                    
+
 
                   </div>
                 </div>
