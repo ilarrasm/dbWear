@@ -12,7 +12,7 @@ function ItemList() {
   console.log(filtro);
   return (
     <div>
-        <ItemListContainer list={envio}>
+        <ItemListContainer list={filtro.length === 0 ? envio : filtro}>
         </ItemListContainer>
     </div>
   )

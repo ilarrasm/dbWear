@@ -7,7 +7,7 @@ function Navbar() {
   //logica
   return (
     <navbar className="flex p-5">
-        <ul className='flex flex-row m-5 justify-end items-center'>
+        <ul className='flex flex-row m-5 justify-end items-center text-lg font-bold '>
           <li key={1} className='mr-5 p-2'><NavLink className='text-neutral-300 hover:text-neutral-400 p-2' to="/">Home</NavLink></li>
           <li key={2} className='mr-5 p-2'><Dropdown items={Database.categorias} text={"Categorias"}/></li>
           <li key={3} className='mr-5 p-2'><NavLink className='text-neutral-300 hover:text-neutral-400 p-2' to="/card">About Us</NavLink></li>

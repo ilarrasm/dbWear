@@ -10,7 +10,9 @@ function Base() {
       <Navbar></Navbar>
       </header>
       
-      <Outlet></Outlet>
+      <Outlet>
+        
+      </Outlet>
       <footer>
 
       </footer>

@@ -35,7 +35,7 @@ const productos =[
             
             id: 3,
             categoria: "accesorios",
-            nombre: "crema anti-adherente de Pole Dance",
+            nombre: "crema anti-adherente",
             descripcion: "Crema anti-adherente",
             precio: 99.9,
             cantidad: 100,

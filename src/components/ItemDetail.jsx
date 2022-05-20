@@ -3,7 +3,7 @@ import ItemCount from "./ItemCount"
 import { NavLink } from 'react-router-dom'
 import { GlobalCartContext } from '../context/CartContext'  
 export default function ItemDetail({producto}) {
-  const [Cantidad, setCantidad] = useState(0)
+  const [Cantidad, setCantidad] = useState(1)
   const {addItem, carrito} = useContext(GlobalCartContext)
   function onAdd(c){
     setCantidad(c)
@@ -14,8 +14,8 @@ export default function ItemDetail({producto}) {
             {
                 producto ? (
                 <>
-                <div className='flex fadeIn'>
-                  <img className='w-full h-full self-center object-cover ml-5 object-bottom rounded-lg' src={producto.img} alt="" /> 
+                <div className='flex'>
+                  <img className='w-full  imgHe self-center object-cover m-5 object-bottom rounded-lg' src={producto.img} alt=""/> 
                   <div className='flex flex-col w-full p-5 text-left'>
                     <h1 className='py-5 text-5xl tracking-wider text-neutral-700 uppercase '>{producto.nombre}</h1> 
                     

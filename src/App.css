@@ -1,23 +1,12 @@
-.fadeIn{
-    animation: fadeIn 2s .5s;
-}
-
-
-
-@keyframes fadeIn {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+.imgHe{
+    height: 800px;
 }
 .toDown{
     text-align: inherit;
     transition: height .5s;
 }
 .toDown:hover:before{
-    width: 100%;
+    width: 0%;
 }
 .toDown:before{
     content: "";
@@ -26,11 +15,11 @@
     top: 0%;
     left: 0%;
     background-color:  rgb(38, 38, 38);
-    width: 0%;
+    width: 100%;
     height: 100%;
     z-index: 15;
     opacity: .6;
-    transition: width .5s ease-in;
+    transition: width .5s;
 }
 
 .bg-Short{
@@ -49,4 +38,11 @@
 }
 .a{
     z-index: 1000;
+}
+.text-10xl{
+    font-size: 8rem;
+    text-overflow: clip;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    padding: 0 5rem;
 }
