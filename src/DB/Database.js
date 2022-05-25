@@ -78,19 +78,19 @@ const productos =[
 ];
 const categorias = [
         {
-            categoria: "shorts",
+            categoria: "Shorts",
             id: 0,
             img: "Short"
             
             
         }, 
         {
-            categoria:"tops",
+            categoria:"Tops",
             id: 1,
             img: "Top"
         }, 
         {
-            categoria: "bragas",
+            categoria: "Bragas",
             id: 2,
             img: "Braga"
         }

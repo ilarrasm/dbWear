@@ -4,8 +4,8 @@ import Navbar from './Navbar'
 import {Outlet} from "react-router-dom" 
 function Base() {
   return (
-    <>
-      <header className='flex w-full justify-between bg-neutral-800 items-center'>
+     <div className="antialiased raleWay">
+      <header className='flex w-full justify-between bg-neutral-900 items-center'>
       <img src={Logo} alt="" className='object-contain  h-24 self-center ml-5' />
       <Navbar></Navbar>
       </header>
@@ -16,7 +16,8 @@ function Base() {
       <footer>
 
       </footer>
-    </>
+    </div>
+   
     
   )
 }

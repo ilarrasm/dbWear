@@ -1,22 +1,21 @@
-import React,{useState, createContext, useEffect} from 'react'
+import React,{useState, createContext} from 'react'
 export const GlobalCartContext = createContext("");
 
 const CartContext = ({children}) => {
     //Este componentes es un proovedor
-  const [carrito, setCarrito] = useState([])  
-  const addItem = (producto) =>{
-    let comparar = carrito.find( (prod) => prod.id = producto.id)
-    console.log(comparar);
-   if(comparar){
-      function nuevaCantidad(){
-        let cantNew = comparar.cantidad + producto.cantidad
-        let nuevoArray = [...carrito]
-        nuevoArray.indexOf(comparar).push(comparar.cantidad = cantNew)
-        setCarrito(nuevoArray)
-      }
-      nuevaCantidad()
+    const [carrito, setCarrito] = useState([])  
+    const addItem = (producto) =>{
+    let comparar = carrito.find( (prod) => producto.id === prod.id)
+    if(comparar){
+       function nuevaCantidad(){
+         let cantNew = comparar.stock + producto.stock
+         let nuevoArray = [...carrito]
+         nuevoArray.indexOf(comparar).push(comparar.stock = cantNew)
+         setCarrito(nuevoArray)
+       }
+       nuevaCantidad()
     }else{
-     setCarrito([ ...carrito, producto])
+      setCarrito([ ...carrito, producto])
     } 
   }
   const clear = ()=> setCarrito([]);

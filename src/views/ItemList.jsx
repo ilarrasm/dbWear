@@ -4,17 +4,17 @@ import Database from '../DB/Database';
 import {useParams} from "react-router-dom"
 function ItemList() {
   
-  const {productos} = Database
-  const envio = productos
-  const params = useParams()
-  console.log(params);
-  const filtro = productos.filter((producto) => producto.categoria === params.categoria)
-  console.log(filtro);
+  const {productos} = Database;
+  const envio = productos;
+  const params = useParams();
+  const filtro = productos.filter((producto) => producto.categoria === params.categoria);
+
+
   return (
-    <div>
+    <>
         <ItemListContainer list={filtro.length === 0 ? envio : filtro}>
         </ItemListContainer>
-    </div>
+    </>
   )
 }
 

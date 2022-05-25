@@ -5,7 +5,7 @@ function App() {
 
   return (
       <CartContext>
-              <Rutas></Rutas>
+          <Rutas></Rutas>
       </CartContext>
 
   );

@@ -17,7 +17,7 @@ function ItemCount({stock, init, onAdd}) {
       // renderizar el componente
     }, [contador])
     function sumar() {
-        contador < stock ? setContador(contador + 1) : alert("debe ser menor a cincuenta")
+        contador < stock ? setContador(contador + 1) : alert("debe ser menor a " + stock)
         
     }
   
