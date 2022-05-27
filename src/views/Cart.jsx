@@ -35,8 +35,9 @@ function Cart() {
                   </li>))
               }
             </ul>
-            <button onClick={clear} className="my-5 p-5"> borra todo</button>
+            <button onClick={clear} className="my-5 p-5"> borra todo </button>
             <p className='flex w-full justify-end p-5 bg-slate-600'>Precio total <strong className='ml-5'>{finalPrice(carrito)} </strong></p>
+            <button>Comprar</button>
            
             
           </> : (
@@ -56,3 +57,7 @@ function Cart() {
 }
 
 export default Cart
+
+// Utiliza las operaciones de inserción para insertar tu orden en la colección y dale al user su id de orden auto-generada
+// Crea los mappings para poder grabar un objeto del formato 
+// { buyer: { name, phone, email }, items: [{ id, title, price }], date, total  }
