@@ -9,9 +9,9 @@ export default function Item({id, nombre, descripcion, precio, img}) {
   
   
     return (
-    <div key={id} className='flex flex-col m-5 w-72 h-full rounded overflow-hidden text-neutral-700'>
+    <div key={id} className='flex flex-col w-full h-full rounded overflow-hidden text-neutral-700 self-center'>
         
-        <img src={img} alt=""  className='h-40  object-cover'/>
+        <img src={img} alt=""  className='h-40 w-full  object-cover'/>
         <h4 className='text-neutral-700 text-2xl my-2 capitalize'>{nombre}</h4>
         <span className='self-end m-1'>{precio} &euro;</span>
         <p className='text-md'>{descripcion}</p>

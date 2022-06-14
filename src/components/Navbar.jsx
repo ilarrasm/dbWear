@@ -13,13 +13,13 @@ function Navbar() {
     active: 'text-neutral-200'
   }
   return (
-    <navbar className={stylo.nav}>
+    <nav className={stylo.nav}>
       <ul className={stylo.ul}>
         <li key={0} className={stylo.li}><NavLink  className={({ isActive }) => (isActive ? stylo.active : stylo.link)} to="/" >Home</NavLink></li>
 
         {Database.categorias.map((categoria) => (
           <li key={categoria.id + 1} className='mr-5 p-2' >
-            <NavLink  className={stylo.link} to={`${categoria.categoria}` } >
+            <NavLink  className={stylo.link} to={`itemList/${categoria.categoria}` } >
               {categoria.categoria}
             </NavLink>
           </li>
@@ -28,7 +28,7 @@ function Navbar() {
         <li key={5} className={stylo.li}><CartIcon /></li>
       </ul>
 
-    </navbar>
+    </nav>
   )
 }
 
