@@ -24,7 +24,7 @@ function Dropdown ({text, items} ) {
       }, 200);
     });
   }
-  const listItems = items.map((item) => <li key={item.id} className={`flex m-1 rounded-l bg-no-repeat bg-cover w-full items-start justify-start toDown relative bg-${item.img} h-screen hidden `}><Link key={item.id}  className="h-full w-1/6 text-neutral-300  text-10xl text-center self-start items-center hidden a uppercase hover:text-neutral-700" to={"/itemList/" + item.categoria} onClick={clickear}>{item.categoria}</Link></li>);
+  const listItems = items.map((item) => <li key={item.id} className={`flex m-1 rounded-l bg-no-repeat bg-cover w-full items-start justify-start toDown relative bg-${item.img} h-screen hidden `}><Link key={item.id}  className="h-full w-1/6 text-neutral-200  text-10xl text-center self-start items-center hidden a uppercase hover:text-neutral-700" to={"/itemList/" + item.categoria} onClick={clickear}>{item.categoria}</Link></li>);
   return (
     <>
         <button onClick={clickear} className="text-neutral-100 bg-neutral-700 hover:bg-yellow-500 hover:text-yellow-100 focus:outline-none  rounded-lg p-2  relative font-bold text-lg" type="button"> {text || "boton"}  </button>

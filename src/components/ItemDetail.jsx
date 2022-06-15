@@ -28,11 +28,11 @@ export default function ItemDetail({ producto }) {
       {
         producto ? (
           <>
-            <div className='flex'>
-              <img className='w-full  imgHe self-center object-cover m-5 object-bottom rounded-lg' src={img(producto.imageId)} alt={producto.descripcion ? (`${producto.nombre} ${producto.descripcion}`) : ""} loading="lazy" />
-              <div className='flex flex-col w-full p-5 text-left'>
+            <div className='flex flex-col-reverse sm:flex-row'>
+              <img className='w-full  sm:imgHe self-center object-cover m-5 object-bottom rounded-lg' src={img(producto.imageId)} alt={producto.descripcion ? (`${producto.nombre} ${producto.descripcion}`) : ""} loading="lazy" />
+              <div className='flex flex-col sm:w-full w-auto p-5 text-left'>
                 <h1 className='py-5 text-5xl tracking-wider text-neutral-700 uppercase '>{producto.nombre}</h1>
-
+                <span>{producto.precio} &euro;</span>
                 <p className='text-neutral-600 text-md'>{producto.descripcion}</p>
                 <div className='flex items-center justify-end'>
                   <ItemCount stock={producto.stock} init={1} onAdd={onAdd} />

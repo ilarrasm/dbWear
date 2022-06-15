@@ -6,9 +6,9 @@ import ItemListContainer from './ItemListContainer'
 
 function Base() {
   return (
-     <div className="antialiased raleWay bg-neutral-100">
+     <div className="antialiased raleWay bg-neutral-100" id='base'>
       <header className='flex w-full justify-between bg-neutral-900 items-center'>
-      <img src={Logo} alt="" className='object-contain  h-24 self-center ml-5' />
+      <img src={Logo} alt="" className='object-contain  h-12 m-5 sm:h-24 self-center ml-5' />
       <Navbar></Navbar>
       </header>
       

@@ -34,7 +34,6 @@ function Cart() {
               <div className='flex justify-between mx-6 text-xl'>
                 <button onClick={clear} className="my-5 p-5 border border-red-600 hover:bg-red-600 self-center rounded text-red-600 hover:text-neutral-50"> Borrar todo </button>
                 <Link to="/" className='text-center my-5 p-5 bg-neutral-500 hover:bg-yellow-300  rounded text-neutral-100 hover:text-neutral-600'> Seguir comprando </Link>
-                <button className='my-5 p-5 text-emerald-500 hover:text-emerald-50 border border-emerald-500 hover:bg-emerald-600 rounded'>Comprar</button>
                 
               </div>
 

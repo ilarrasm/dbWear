@@ -18,7 +18,7 @@ export default function ItemDetailContainer({ prod }) {
     })
 
     return () => { }
-  }, [])
+  }, [producto])
   return (
     <>
 

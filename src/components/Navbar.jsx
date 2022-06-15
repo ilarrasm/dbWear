@@ -2,30 +2,41 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import CartIcon from './CartIcon';
 import Database from "../DB/Database"
+import { RiMenuFill } from "react-icons/ri";
 function Navbar() {
   //logica
   console.log(Database.categorias);
   let stylo = {
-    nav: 'flex p-5',
-    ul: 'flex flex-row m-5 justify-end items-center text-lg font-semibold text-xl ',
-    li: 'mr-5 p-2',
+    nav: 'flex sm:p-5 w-full ',
+    ul: 'flex flex-row sm:m-5 justify-between w-full sm:justify-end items-center sm:text-lg font-semibold text-xl ',
+    li: 'sm:mr-5 sm:p-2',
     link: 'text-neutral-400 hover:text-neutral-200  p-2',
-    active: 'text-neutral-200'
+    active: 'text-neutral-200',
+    res: 'text-neutral-400 sm:hidden hover:text-neutral-200  p-2'
+  }
+  const toggle = () => {
+    let menu = document.querySelector("#menu")
+    menu.classList.toggle("hidden")
+    menu.classList.toggle("flex")
   }
   return (
     <nav className={stylo.nav}>
       <ul className={stylo.ul}>
-        <li key={0} className={stylo.li}><NavLink  className={({ isActive }) => (isActive ? stylo.active : stylo.link)} to="/" >Home</NavLink></li>
+        <li key={0} className={stylo.li}><NavLink className={({ isActive }) => (isActive ? stylo.active : stylo.link)} to="/" >Home</NavLink></li>
 
-        {Database.categorias.map((categoria) => (
-          <li key={categoria.id + 1} className='mr-5 p-2' >
-            <NavLink  className={stylo.link} to={`itemList/${categoria.categoria}` } >
-              {categoria.categoria}
-            </NavLink>
-          </li>
-        ))}
-        <li key={4} className={stylo.li}><NavLink className={stylo.link} to="/card">About Us</NavLink></li>
-        <li key={5} className={stylo.li}><CartIcon /></li>
+        <li className='hidden flex-col justify-between items-center text-5xl absolute top-20 left-0 py-5 bg-neutral-900 w-full h-96 mr-5 p-2 sm:flex sm:flex-row sm:text-lg sm:w-auto sm:h-auto sm:static' id='menu'>
+          {Database.categorias.map((categoria) => (
+            <li key={categoria.id + 1} className=''  >
+              <NavLink className={stylo.link} to={`itemList/${categoria.categoria}`} >
+                {categoria.categoria}
+              </NavLink>
+            </li>
+          ))}
+        </li>
+
+
+        <li key={4} className={stylo.li}><CartIcon /></li>
+        <li className={stylo.li}><button className={stylo.res} onClick={toggle}> <RiMenuFill></RiMenuFill> </button></li>
       </ul>
 
     </nav>

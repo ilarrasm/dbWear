@@ -4,9 +4,9 @@ import ItemList from "./ItemList"
 const Home = () => {
   return (
     <main className='flex flex-col bg-neutral-100'>
-      <article className='flex bg-back w-full bg-cover h-45max'>
-        <h1 className='text-9xl  fontCustom text-neutral-800 self-start mt-20 ml-5'>Supérate, fortalecete y liberate</h1>
-        <section className='flex flex-col text-2xl bg-neutral-50/80 rounded self-center mr-5 p-5 text-neutral-800 '>
+      <article className='flex flex-col sm:flex-row bg-back sm:w-full bg-cover h-full sm:h-45max bg-fixed'>
+        <h1 className=' text-2xl sm:text-9xl  fontCustom text-neutral-800 self-start mt-20 sm:ml-5 '>Supérate, fortalecete y liberate</h1>
+        <section className='flex flex-col text-md sm:text-2xl bg-neutral-50/80 rounded self-center  sm:mr-5 p-5 text-neutral-800 '>
           <p className='mb-5'>Las prendas <strong className='text-base font-semibold'>D&B</strong>  son tu compañera perfecta en cualquier momento. </p>
           <p className='mb-5'>Con su resistencia, comodidad y elegancia permiten estar en todos esos duros entrenamientos para desplegar tu elegancia en el escenario.</p>
           <p className='mb-5'>Nuestro compromiso con las mujeres y la disciplina para su desarrollo porque el pole dance es autosuperación, libertad y arte.</p>

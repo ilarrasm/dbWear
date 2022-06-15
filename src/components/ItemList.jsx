@@ -16,8 +16,8 @@ export default function ItemList({lista , limit}){
   return (
     
     
-    <section className='grid grid-cols-4 p-5 gap-x-5 mx-10'>
-      <h2 className='text-3xl p-5 text-neutral-500 col-span-4'> { listaCopy.length > 0 ? "Recomendados para vos":"Nuestros Productos" }</h2>
+    <section className='md:grid md:grid-cols-4 p-5 gap-x-5 g mx-10 sm:flex sm:flex-col'>
+      <h2 className='text-5xl py-5 mb-5 text-neutral-500 col-span-4'> { listaCopy.length > 0 ? "Recomendados para vos":"Nuestros Productos" }</h2>
       {
         
       lista.length > 0 && !limit  ? (lista.map((list, index) =>(
