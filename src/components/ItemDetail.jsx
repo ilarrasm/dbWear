@@ -34,7 +34,7 @@ export default function ItemDetail({ producto }) {
                 <h1 className='py-5 text-5xl tracking-wider text-neutral-700 uppercase '>{producto.nombre}</h1>
                 <span>{producto.precio} &euro;</span>
                 <p className='text-neutral-600 text-md'>{producto.descripcion}</p>
-                <div className='flex items-center justify-end'>
+                <div className='flex flex-col sm:flex-row items-center justify-end'>
                   <ItemCount stock={producto.stock} init={1} onAdd={onAdd} />
 
                  <NavLink className="flex justify-end" to="/cart">

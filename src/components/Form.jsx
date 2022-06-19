@@ -112,7 +112,7 @@ export const Form = () => {
 
 
   return (
-    <form className='grid  grid-cols-2  items-center bg-neutral-100 rounded w-full text-neutral-800' >
+    <form className='grid  grid-cols-1 sm:grid-cols-2  items-center bg-neutral-100 rounded w-full text-neutral-800' >
       <h2 className='flex w-full col-span-2 text-5xl p-5 text-neutral-900 font-light justify-center italic'>Formulario de compra</h2>
       {
         Object.keys(buyer).map((dato, index) => (
@@ -131,7 +131,7 @@ export const Form = () => {
               </select>
             </div>) : (
 
-            <div key={index} className="flex flex-col m-5 py-2 px-5 justify-between rounded ">
+            <div key={index} className="flex flex-col m-5 py-2 px-5 justify-between rounded col-span-2 sm:col-span-1">
 
               <label className="mb-2 " htmlFor={[dato]}>{[dato]}</label>
 
